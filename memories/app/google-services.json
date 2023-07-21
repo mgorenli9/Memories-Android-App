@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "100781062481",
+    "project_id": "instaclonejava-4f30d",
+    "storage_bucket": "instaclonejava-4f30d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:100781062481:android:05f07fda5f54a981e97b70",
+        "android_client_info": {
+          "package_name": "com.mehmet.memories"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "100781062481-vj35d7ntr550sq12pgj14656qjn25kd8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALvI5R5BXryblMfBrnb8ta8i3DphLvIzY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "100781062481-vj35d7ntr550sq12pgj14656qjn25kd8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
