@@ -33,7 +33,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostHolder> {
     @Override
     public void onBindViewHolder(@NonNull PostHolder holder, int position) {
         holder.recyclerRowBinding.txtRecyclerViewUserName.setText(postArrayList.get(position).email);
-        holder.recyclerRowBinding.txtRecyclerViewComment.setText(postArrayList.get(position).comment);
+       // holder.recyclerRowBinding.txtRecyclerViewComment.setText(postArrayList.get(position).comment);
+        holder.recyclerRowBinding.txtRecyclerViewTitle.setText(postArrayList.get(position).title);
         Picasso.get().load(postArrayList.get(position).downloadUrl).into(holder.recyclerRowBinding.imageViewRecyclerViewImage);
     }
 

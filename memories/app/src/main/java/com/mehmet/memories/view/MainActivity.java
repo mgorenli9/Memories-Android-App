@@ -18,7 +18,7 @@ import com.mehmet.memories.R;
 import com.mehmet.memories.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
-
+//yedek
     Button btnSignIn,btnSignUp;
 
     private ActivityMainBinding binding;
