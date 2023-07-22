@@ -6,14 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:layout_margin="5dp">
+    android:layout_margin="2dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardElevation="10dp"
         app:cardCornerRadius="20dp"
-        android:layout_margin="10dp"
+        android:layout_margin="8dp"
         app:cardBackgroundColor="@color/gray_black"
         app:cardMaxElevation="2dp"
         app:cardPreventCornerOverlap="true"
@@ -30,14 +30,15 @@
                 android:layout_height="wrap_content"
                 android:text="Username"
                 android:textSize="24dp"
-                android:paddingLeft="12dp"
+                android:paddingLeft="4dp"
+                android:layout_margin="8dp"
                 android:textColor="@color/bright_gray"
                 />
 
             <ImageView
                 android:id="@+id/imageViewRecyclerViewImage"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="300dp"
                 tools:srcCompat="@tools:sample/avatars"
                 android:layout_gravity="center"/>
 
@@ -48,6 +49,7 @@
                 android:text="Title"
                 android:gravity="center"
                 android:textSize="20dp"
+                android:layout_margin="4dp"
                 android:textColor="@color/bright_gray"
                 />
         </LinearLayout>
