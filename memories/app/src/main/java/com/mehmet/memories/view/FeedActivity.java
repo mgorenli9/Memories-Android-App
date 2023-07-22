@@ -74,9 +74,10 @@ public class FeedActivity extends AppCompatActivity {
 
                         String userEmail = (String) data.get("userEmail");
                         String comment = (String) data.get("comment");
+                        String title = (String) data.get("title");
                         String downloadURL= (String) data.get("downloadURL");
 
-                        Post post = new Post(userEmail,comment,downloadURL);
+                        Post post = new Post(userEmail,comment,title,downloadURL);
                         postArrayList.add(post);
 
                     }

@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -42,6 +43,7 @@ public class UploadActivity extends AppCompatActivity {
 
     Button btnShare;
     ImageView imageView;
+    EditText editTxtTitle;
 
     Uri imageData;
     ActivityResultLauncher<Intent> activityResultLauncher; // galeriye gitme intenti
@@ -64,6 +66,7 @@ public class UploadActivity extends AppCompatActivity {
 
         btnShare = (Button) findViewById(R.id.btnShare);
         imageView = (ImageView) findViewById(R.id.imageView);
+        editTxtTitle= (EditText) findViewById(R.id.editTxtTitle);
 
         firebaseStorage = FirebaseStorage.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
@@ -92,12 +95,14 @@ public class UploadActivity extends AppCompatActivity {
                                 public void onSuccess(Uri uri) {
                                     String downloadUrl = uri.toString();
                                     String comment = activityUploadBinding.editTxtComment.getText().toString();
+                                    String title = activityUploadBinding.editTxtTitle.getText().toString();
                                     FirebaseUser user = firebaseAuth.getCurrentUser();
                                     String email = user.getEmail();
 
                                     HashMap<String, Object> postData = new HashMap<>();
                                     postData.put("userEmail",email);
                                     postData.put("comment",comment);
+                                    postData.put("title",title);
                                     postData.put("downloadURL",downloadUrl);
                                     postData.put("date", FieldValue.serverTimestamp()); // güncel tarihi verir
 
