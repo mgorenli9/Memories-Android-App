@@ -100,17 +100,27 @@ public class FeedActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
             // eğer kullanıcı add post denen item e tıklarsa -->
-        if(item.getItemId() ==  R.id.add_post){
-            // go to upload activity
-            Intent intentToUpload = new Intent(FeedActivity.this,UploadActivity.class);
-            startActivity(intentToUpload);
-        }
-        else if (item.getItemId() == R.id.sign_out){
-            // sign out and back to sign in activity
-            firebaseAuth.signOut();
 
-            Intent intentToSignIn = new Intent(FeedActivity.this,MainActivity.class);
-            startActivity(intentToSignIn);
+        switch (item.getItemId()){
+            case R.id.ic_btn_add:{
+                Intent intentToUpload = new Intent(FeedActivity.this,UploadActivity.class);
+                startActivity(intentToUpload);
+                break;
+            }
+            case R.id.sign_out:{
+                // sign out and back to sign in activity
+                firebaseAuth.signOut();
+
+                Intent intentToSignIn = new Intent(FeedActivity.this,MainActivity.class);
+                startActivity(intentToSignIn);
+                break;
+            }
+            case R.id.settings:{
+                Toast.makeText(FeedActivity.this,"Settings",Toast.LENGTH_SHORT).show();
+                break;
+            }
+
+
         }
         return super.onOptionsItemSelected(item);
     }
